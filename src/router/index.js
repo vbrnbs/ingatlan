@@ -12,6 +12,10 @@ const routes = [
     path: '/kedvencek',
     name: 'Kedvencek',
     component: Kedvencek
+  },
+  {
+    path: '/ingatlan/:id',
+    component: () => import('@/views/Ingatlan.vue')
   }
 ]
 
