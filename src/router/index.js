@@ -15,7 +15,8 @@ const routes = [
   },
   {
     path: '/ingatlan/:id',
-    component: () => import('@/views/Ingatlan.vue')
+    name: 'Ingatlan',
+    component: () => import('../views/Ingatlan.vue')
   }
 ]
 

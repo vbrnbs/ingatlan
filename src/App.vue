@@ -13,6 +13,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
+  /* overflow: hidden; */
   color: #000000;
   background: #FAFBFF;;
 }

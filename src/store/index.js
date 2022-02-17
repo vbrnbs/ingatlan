@@ -17,9 +17,12 @@ export default createStore({
   },
   actions: {
     addToFavorites (context, payload) {
+      this.isActive = true
+      payload.status = 'checked'
       const kedvencek = context.state.kedvencek
       kedvencek.push(payload)
       context.commit('UPDATE_FAVORITES', kedvencek)
+      console.log(kedvencek, payload.status)
     },
     removeFromFavorites (context, payload) {
       const kedvencek = context.state.kedvencek
