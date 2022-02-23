@@ -26,7 +26,7 @@
             <p class="m-0 px-2">{{ ad.uploadDate }}</p>
           </div>
           <!-- kedvenc-csillag addToObject(ad)-->
-          <star class="star" v-on:click="$store.dispatch('removeFromFavorites', userData)" />
+          <star class="star" v-on:click="$store.dispatch('removeFromFavorites', ad)" />
         </div>
       </div>
     </div>
@@ -35,11 +35,19 @@
 
 <script>
 import star from './Star.vue'
-
+// import List from './List.vue'
 export default {
   name: 'KedvencekEl',
   components: {
     star
+    // List
+  },
+  computed: {
+    kedvi: function () {
+      return this.$store.state.kedvencek.filter((k) =>
+        k.kedvenc === true
+      )
+    }
   }
 }
 </script>

@@ -44,7 +44,7 @@
                 <p class="fs-5 fw-bolder">{{ ingatlan.address }}</p>
                 <div class="d-flex justify-content-between align-items-end">
                     <p class="fs-6 fw-bold m-0">{{ new Intl.NumberFormat('de-DE').format(ingatlan.price) }} {{ ingatlan.currency }}</p>
-                    <Star v-on:click="$store.dispatch('addToFavorites', ad)" />
+                    <Star v-on:click="$store.dispatch('addToFavorites', ingatlan)" />
                 </div>
                 <div class="d-flex align-items-center mt-3">
                     <svg width="14" height="16" viewBox="0 0 14 16" fill="none" xmlns="http://www.w3.org/2000/svg">
